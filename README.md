@@ -1,95 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Instructions</title>
-    <style>
-      li {
-        padding-bottom: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>BuildASign Frontend Developer Coding Test</h1>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    <ol>
-      <li>
-        All text can be hardcoded.
-      </li>
-      <li>
-        Using the provided assets, convert the screenshot into a functional
-        single page application using html, css, and javascript. This will be
-        referred to as the 'designer'. Make sure the elements are positioned
-        relative to the viewport rather than the content. Don't worry about
-        desktop views, but keep in mind the different resolutions of mobile
-        devices. In other words, no need to introduce different layouts (e.g.
-        elements change positioning, etc.) unless you feel it is necessary. If
-        you feel it is necessary to change the layout, include a readme.txt in
-        your project root and explain why.
-      </li>
-      <li>
-        The 'Edit Size' and hamburger navigation buttons should each toggle a
-        respective animated event when clicked: The 'Edit Size' is a permanent
-        fixture button that should present an overlay that covers the screen
-        (slide in, fade in, etc) and has some kind of toggle/button to remove it
-        and show the designer again. It doesn't have to do anything else and
-        there are no specifications around what it looks like or otherwise. The
-        navigation button should toggle a dropdown navbar which you can populate
-        with some dummy links.
-      </li>
-      <li>
-        The 'Rotate' button should flip the aspect ratio of the item within the
-        center of the designer (the area containing 'Click to Upload Image').
-        Clicking again should represent a 180 degrees rotation and clicking 4
-        times total should revert to the original aspect ratio. Note: this
-        doesn't have to modify the file such that if you were to save it locally
-        it is rotated...just change the user display to rotate.
-      </li>
-      <li>
-        When clicking any of the 3 'Upload' buttons, make an asynchronous call
-        to
-        <a href="https://source.unsplash.com/random" target="_blank"
-          >https://source.unsplash.com/random</a
-        >
-        and make the response image the background of the designer item ( the
-        area containeing 'Click to Upload Image'). The image should crop the
-        least amount possible. This should still function correctly with the
-        previous step's rotate functionality.
-      </li>
-      <li>
-        The 'Edit', 'Save', '?', and 'Cart' buttons should do nothing.
-      </li>
-    </ol>
-    <div>
-      <h2>Submitting Results:</h2>
-      <p>
-        Either return a zipped folder similar to how you received it with a
-        finished, working example or provide similar in a repo and send back a
-        link to the repo.
-      </p>
-    </div>
-    <div>
-      <h2>Additional information:</h2>
-      <p>
-        As far as browser support, assume transpilation for javascript and don't
-        worry about including fallbacks for css such as vendor prefixes,
-        flexbox, and css-grid.
-      </p>
-      <p>
-        Feel free to use any resources you need including a css framework like
-        bootstrap (though please extend the bootstrap classes into your own
-        class names), a css precompiler like sass, and any javascript framework
-        (though preference is vanilla javascript and ES6/any newer
-        implementations).
-        <!--Feel free to use any icon library such as
-        <a href="https://fontawesome.com/?from=io"
-          >https://fontawesome.com/?from=io</a
-        >
-        for the icons.-->
-      </p>
-    </div>
+## Available Scripts
 
-  </body>
-</html>
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
