@@ -1,0 +1,36 @@
+$colors: (
+  primary: #92c7bb,
+  alternative: #e9775c,
+  base: #505d77,
+  grey: #d4d4d4,
+  x-light: #f6f9fb,
+  light: #ffffff
+);
+
+$font-sizes: (
+  T8: 0.554375em,
+  T4: 1em,
+  T3: 0.88875em
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function font($font-name) {
+  @return map-get($font-sizes, $font-name);
+}
+
+.navbar {
+  background: #f9f4f0;
+  .logo_svg {
+    cursor: pointer;
+    height: 2em;
+    width: 2em;
+  }
+  .icon_svg {
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
