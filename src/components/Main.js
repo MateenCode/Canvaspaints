@@ -24,12 +24,10 @@ export default function Main(props) {
           culpa qui officia deserunt mollit anim id est laborum.
         </ModalBody>
         <ModalFooter>
-          <Button className="text-white" onClick={props.toggle}>
-            Cancel
-          </Button>
-          <button className="modal_btn" onClick={props.toggle}>
+          <Button onClick={props.toggle}>Cancel</Button>
+          <span className="modal_btn" onClick={props.toggle}>
             Do Something
-          </button>
+          </span>
         </ModalFooter>
       </Modal>
 
@@ -38,11 +36,11 @@ export default function Main(props) {
           <img src={Edit} alt="n/a" className="img_svg edit" />
           <p className="text edit_text">EDIT</p>
         </div>
-        <div className="img_box">
+        <div className="img_box" onClick={props.upload}>
           <img src={Upload} alt="n/a" className="img_svg" />
           <p className="text">UPLOAD</p>
         </div>
-        <div className="img_box">
+        <div className="img_box" onClick={props.handleRotate}>
           <img src={Rotate} alt="n/a" className="img_svg" />
           <p className="text">ROTATE</p>
         </div>
@@ -57,14 +55,24 @@ export default function Main(props) {
         <p className="gear_text mt-2">EDIT</p>
         <p className="gear_text">SIZE</p>
       </span>
-
       <div className="display">
-        <div className="cloud_display">
-          <img className="cloud_img" src={Cloud} alt="n/a" />
-          <p className="text_header">Click To Upload Image</p>
-          <p className="text_sub">Accepted file types .jpg, .png, .gif</p>
-        </div>
+        {props.showDefault ? (
+          <div className="cloud_display">
+            <img
+              onClick={props.upload}
+              className="cloud_img"
+              src={Cloud}
+              alt="n/a"
+            />
+            <p className="text_header">Click To Upload Image</p>
+            <p className="text_sub">Accepted file types .jpg, .png, .gif</p>
+          </div>
+        ) : (
+          <div className="img_display">img</div>
+        )}
       </div>
     </div>
   );
 }
+
+// style={{ transform: `rotate(${props.rotation}deg)` }}
