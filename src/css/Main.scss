@@ -68,11 +68,25 @@ $desktop: 840px;
   height: 35vh;
   width: 70vw;
 
+  .current_img {
+    height: 100%;
+    width: 100%;
+  }
+
   @include desktop {
     margin-top: 1.5em;
     height: 50vh;
     width: 50vw;
   }
+}
+
+.spinner {
+  color: color(primary);
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cloud_display {

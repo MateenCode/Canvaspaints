@@ -10,14 +10,18 @@ import Footer from "./components/Footer";
 1. hamburger toggle navlinks ✔️
 2. Edit Size present overlay ✔️
 3. Rotate flip aspect ratio ✔️
-4. 'Upload' buttons display img 
+4. 'Upload' buttons display img ✔️
+5. img updating asynch ✔️
+6. transition affect with rotation 
+7. make alt img loader ✔️
 */
 
 class App extends Component {
   state = {
+    currentImage: undefined,
+    showDefault: true,
     modal: false,
-    rotation: 0,
-    showDefault: true
+    rotation: 0
   };
 
   toggle = () => {
@@ -27,28 +31,39 @@ class App extends Component {
   };
 
   handleRotate = () => {
-    let newRotation = this.state.rotation + 90;
-    if (newRotation >= 360) {
-      newRotation = -360;
+    if (!this.state.showDefault) {
+      let newRotation = this.state.rotation + 90;
+      if (newRotation >= 360) {
+        newRotation = -360;
+      }
+      this.setState({
+        rotation: newRotation
+      });
     }
+  };
+
+  upload = async () => {
+    const api_call = await fetch("https://source.unsplash.com/random");
+
+    const image = await api_call;
+
     this.setState({
-      rotation: newRotation
+      currentImage: image.url
+    });
+
+    this.setState({
+      showDefault: false
     });
   };
 
-  upload = () => {
-    this.setState(prevState => ({
-      showDefault: !prevState.showDefault
-    }));
-  };
-
   render() {
-    const { rotation, modal, showDefault } = this.state;
+    const { rotation, modal, showDefault, currentImage } = this.state;
     return (
       <div className="App">
         <Header />
         <Main
           handleRotate={this.handleRotate}
+          currentImage={currentImage}
           showDefault={showDefault}
           toggle={this.toggle}
           upload={this.upload}

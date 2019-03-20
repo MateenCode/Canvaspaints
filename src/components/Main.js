@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
+import Img from "react-image";
 import "../css/Main.scss";
 
 import Edit from "../assets/icon/edit.svg";
@@ -55,8 +57,9 @@ export default function Main(props) {
         <p className="gear_text mt-2">EDIT</p>
         <p className="gear_text">SIZE</p>
       </span>
-      <div className="display">
-        {props.showDefault ? (
+
+      {props.showDefault ? (
+        <div className="display">
           <div className="cloud_display">
             <img
               onClick={props.upload}
@@ -67,12 +70,27 @@ export default function Main(props) {
             <p className="text_header">Click To Upload Image</p>
             <p className="text_sub">Accepted file types .jpg, .png, .gif</p>
           </div>
-        ) : (
-          <div className="img_display">img</div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div
+          className="display"
+          style={{
+            transform: `rotate(${props.rotation}deg)`
+          }}
+        >
+          <Img
+            className="current_img"
+            src={props.currentImage}
+            loader={
+              <div className="spinner text-center">
+                <div className="spinner-border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
+            }
+          />
+        </div>
+      )}
     </div>
   );
 }
-
-// style={{ transform: `rotate(${props.rotation}deg)` }}
