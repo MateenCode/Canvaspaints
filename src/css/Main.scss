@@ -2,7 +2,7 @@ $colors: (
   primary: #92c7bb,
   alternative: #e9775c,
   base: #505d77,
-  grey: #d4d4d4,
+  light-grey: #d4d4d4,
   x-light: #f6f9fb,
   light: #ffffff
 );
@@ -21,7 +21,98 @@ $font-sizes: (
   @return map-get($font-sizes, $font-name);
 }
 
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 .main {
   height: 73vh;
   background-color: color(x-light);
+}
+
+.wrapper_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  .img_box {
+    border-top: 1px solid color(light-grey);
+    border-bottom: 1px solid color(light-grey);
+    border-right: 1px solid color(light-grey);
+    background: color(light);
+    cursor: pointer;
+    width: 20em;
+  }
+  .left {
+    border-left: 1px solid color(light-grey);
+  }
+  .img_svg {
+    margin-top: 1em;
+    height: 2em;
+    width: 2em;
+  }
+  .edit {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    height: 3em;
+    width: 3em;
+  }
+  .text {
+    margin-top: 1.5em;
+    font-weight: bold;
+    font-size: font(T8);
+  }
+  .edit_text {
+    margin-top: 0.5em;
+  }
+}
+
+.display {
+  background: color(light);
+  box-shadow: 0 0 2px 4px color(light-grey);
+  border-radius: 1px;
+  margin: 0 auto;
+  margin-top: 3em;
+  height: 35vh;
+  width: 70vw;
+
+  @include desktop {
+    height: 45vh;
+  }
+}
+
+.cloud_display {
+  text-align: center;
+  .cloud_img {
+    margin-top: 3em;
+    @include desktop {
+      height: 6em;
+    }
+  }
+  .text_header {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.8em;
+    font-size: 1.3em;
+    color: color(base);
+    font-weight: bold;
+    @include desktop {
+      font-size: 2em;
+    }
+  }
+
+  .text_sub {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    color: color(base);
+    font-weight: 100;
+    @include desktop {
+      font-size: 1.4em;
+    }
+  }
 }
