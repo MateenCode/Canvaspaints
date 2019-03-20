@@ -6,6 +6,7 @@ import Upload from "../assets/icon/upload.svg";
 import Rotate from "../assets/icon/rotate.svg";
 import Save from "../assets/icon/save.svg";
 import Cloud from "../assets/icon/upload.png";
+import Gear from "../assets/icon/gear.svg";
 
 export default function Main() {
   return (
@@ -28,9 +29,15 @@ export default function Main() {
           <p className="text">SAVE</p>
         </div>
       </div>
+      <span className="edit_size">
+        <img src={Gear} alt="n/a" className="img_gear" />
+        <p className="gear_text mt-2">EDIT</p>
+        <p className="gear_text">SIZE</p>
+      </span>
+
       <div className="display">
         <div className="cloud_display">
-          <img class="cloud_img" src={Cloud} alt="n/a" />
+          <img className="cloud_img" src={Cloud} alt="n/a" />
           <p className="text_header">Click To Upload Image</p>
           <p className="text_sub">Accepted file types .jpg, .png, .gif</p>
         </div>

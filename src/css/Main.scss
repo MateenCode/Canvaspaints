@@ -62,12 +62,12 @@ $desktop: 840px;
     width: 3em;
   }
   .text {
-    margin-top: 1.5em;
+    margin-top: 1.3em;
     font-weight: bold;
     font-size: font(T8);
   }
   .edit_text {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
   }
 }
 
@@ -81,7 +81,9 @@ $desktop: 840px;
   width: 70vw;
 
   @include desktop {
-    height: 45vh;
+    margin-top: 1em;
+    height: 50vh;
+    width: 50vw;
   }
 }
 
@@ -90,7 +92,8 @@ $desktop: 840px;
   .cloud_img {
     margin-top: 3em;
     @include desktop {
-      height: 6em;
+      margin-top: 4em;
+      height: 7em;
     }
   }
   .text_header {
@@ -101,7 +104,7 @@ $desktop: 840px;
     color: color(base);
     font-weight: bold;
     @include desktop {
-      font-size: 2em;
+      font-size: 1.5em;
     }
   }
 
@@ -112,7 +115,39 @@ $desktop: 840px;
     color: color(base);
     font-weight: 100;
     @include desktop {
-      font-size: 1.4em;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.edit_size {
+  position: fixed;
+  right: 0px;
+  text-align: center;
+  background: color(light);
+  border: 1px solid color(light-grey);
+  height: 13vh;
+  width: 3.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  @include desktop {
+    height: 20vh;
+    width: 5em;
+  }
+  .img_gear {
+    width: 2.2em;
+    margin-top: 0.1em;
+    @include desktop {
+      margin-top: 1em;
+      width: 3.5em;
+    }
+  }
+  .gear_text {
+    margin: 0;
+    font-size: font(T8);
+    font-weight: bold;
+    @include desktop {
+      font-size: 0.8em;
     }
   }
 }
