@@ -21,6 +21,52 @@ $font-sizes: (
   @return map-get($font-sizes, $font-name);
 }
 
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 .footer {
   border-top: 1px solid color(light-grey);
+  .final_price {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    color: color(alternative);
+    font-size: 1.5em;
+    text-shadow: 0.8px 0 color(alternative);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    @include desktop {
+      margin-left: 1em;
+      font-size: 1.8em;
+    }
+  }
+  .total_price {
+    color: color(base);
+    font-size: font(T3);
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+    text-decoration-line: line-through;
+    text-shadow: 0.3px 0 color(base);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    @include desktop {
+      margin-left: 1em;
+      font-size: 1em;
+    }
+  }
+  .upload_btn {
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    background: color(alternative);
+    color: color(light);
+    width: 30vh;
+    font-size: 1.2em;
+  }
 }

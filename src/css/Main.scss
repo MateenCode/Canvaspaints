@@ -30,8 +30,16 @@ $desktop: 840px;
 }
 
 .main {
-  height: 73vh;
+  height: 70vh;
   background-color: color(x-light);
+}
+
+.modal_btn {
+  background: color(alternative);
+  color: color(light);
+  border: none;
+  padding: 0.45em;
+  border-radius: 2px;
 }
 
 .wrapper_box {
@@ -81,7 +89,7 @@ $desktop: 840px;
   width: 70vw;
 
   @include desktop {
-    margin-top: 1em;
+    margin-top: 1.5em;
     height: 50vh;
     width: 50vw;
   }
@@ -126,25 +134,26 @@ $desktop: 840px;
   text-align: center;
   background: color(light);
   border: 1px solid color(light-grey);
-  height: 13vh;
-  width: 3.5em;
-  margin-top: 1em;
+  height: 14vh;
+  width: 4em;
+  margin-top: 1.2em;
   cursor: pointer;
   @include desktop {
     height: 20vh;
     width: 5em;
   }
   .img_gear {
-    width: 2.2em;
-    margin-top: 0.1em;
+    width: 2.5em;
+    margin-top: 0.5em;
     @include desktop {
       margin-top: 1em;
+      margin-bottom: 0.3em;
       width: 3.5em;
     }
   }
   .gear_text {
     margin: 0;
-    font-size: font(T8);
+    font-size: 0.65em;
     font-weight: bold;
     @include desktop {
       font-size: 0.8em;

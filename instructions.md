@@ -49,7 +49,7 @@ BuildASign Frontend Developer Coding Test
     finished, working example or provide similar in a repo and send back a
     link to the repo.
 
-    Additional information:
+## Additional information:
 
     As far as browser support, assume transpilation for javascript and don't
     worry about including fallbacks for css such as vendor prefixes,
