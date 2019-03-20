@@ -23,10 +23,12 @@ export default class Header extends Component {
     return (
       <div className="header">
         <Navbar light expand="md">
-          <span onClick={this.toggleNavbar}>
-            <img src={Bars} alt="n/a" className="logo_svg" />
+          <span>
+            <span onClick={this.toggleNavbar}>
+              <img src={Bars} alt="n/a" className="logo_svg mr-5" />
+            </span>
+            <img src={Logo} alt="n/a" className="logo_svg mr-2" />
           </span>
-          <img src={Logo} alt="n/a" className="logo_svg" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
@@ -45,6 +47,9 @@ export default class Header extends Component {
             <img src={Cart} alt="n/a" className="icon_svg" />
           </NavbarBrand>
         </Navbar>
+        <div className="banner">
+          <span className="text">87% Off Canvas Prints! Click For Details</span>
+        </div>
       </div>
     );
   }
