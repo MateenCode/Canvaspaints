@@ -20,3 +20,11 @@ $font-sizes: (
 @function font($font-name) {
   @return map-get($font-sizes, $font-name);
 }
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

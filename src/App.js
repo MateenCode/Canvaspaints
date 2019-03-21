@@ -13,7 +13,6 @@ import Footer from "./components/Footer";
 4. 'Upload' buttons display img ✔️
 5. img updating asynch ✔️
 6. transition affect with rotation 
-7. make alt img loader ✔️
 */
 
 class App extends Component {
@@ -44,7 +43,6 @@ class App extends Component {
 
   upload = async () => {
     const api_call = await fetch("https://source.unsplash.com/random");
-
     const image = await api_call;
 
     this.setState({

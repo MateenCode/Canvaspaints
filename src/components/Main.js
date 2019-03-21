@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
-import Img from "react-image";
 import "../css/Main.scss";
 
 import Edit from "../assets/icon/edit.svg";
@@ -78,17 +77,7 @@ export default function Main(props) {
             transform: `rotate(${props.rotation}deg)`
           }}
         >
-          <Img
-            className="current_img"
-            src={props.currentImage}
-            loader={
-              <div className="spinner text-center">
-                <div className="spinner-border" role="status">
-                  <span className="sr-only">Loading...</span>
-                </div>
-              </div>
-            }
-          />
+          <img className="current_img" src={props.currentImage} alt="n/a" />
         </div>
       )}
     </div>
